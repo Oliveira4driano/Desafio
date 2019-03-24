@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Catálogo Virtual
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list *ngFor="let produto of produtos">
+    <a href="list_produtos/+{{produto.codigo}}">
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{produto.nome}}</ion-card-title>
+      </ion-card-header>
+      <ion-img [src]="serviceUrl.getUrl()+produto.foto"></ion-img>
+      <ion-card-content>
+        <p>{{produto.descricao}}</p>
+      </ion-card-content>
+  </ion-card>
+</a>
+</ion-list>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button color="danger" (click)="toProdutos()">
+    <ion-icon name="appstore"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+</ion-content>
