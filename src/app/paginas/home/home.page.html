@@ -16,16 +16,25 @@
       <ion-card-header>
         <ion-card-title>{{produto.nome}}</ion-card-title>
       </ion-card-header>
-      <ion-img [src]="serviceUrl.getUrl()+produto.foto"></ion-img>
-      <ion-card-content>
+     <ion-img [src]="'http://identidadeimei.com/catalogo/php/img/img_produtos/'+produto.foto"></ion-img> 
+     
+     <ion-card-content>
         <p>{{produto.descricao}}</p>
       </ion-card-content>
+      <ion-card-content>
+        <p>R$: {{produto.valor}}</p>
+      </ion-card-content>
+      <ion-card-content>
+        <p>Disponivel: {{produto.quantidade}} UND</p>
+      </ion-card-content>
+      
+
   </ion-card>
 </a>
 </ion-list>
 
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-  <ion-fab-button color="danger" (click)="toProdutos()">
+  <ion-fab-button color="danger" (click)="postarProduto()">
     <ion-icon name="appstore"></ion-icon>
   </ion-fab-button>
 </ion-fab>

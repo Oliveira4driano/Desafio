@@ -2,7 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-date_default_timezone_set('America/Sao_Paulo');
+date_default_timezone_set('America/Manaus');
 
 $data = file_get_contents("php://input");
 $objData = json_decode($data);

@@ -7,7 +7,7 @@ try {
 		echo "Não foi possivel conectar com Banco de Dados!";
 	}		
 
-	$query = $conexao->prepare('SELECT * FROM `produto` order by idproduto asc');
+	$query = $conexao->prepare('SELECT * FROM `produto` order by procodigo asc');
 
 		$query->execute();
 

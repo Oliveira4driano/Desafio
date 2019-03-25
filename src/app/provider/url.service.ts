@@ -7,9 +7,13 @@ import { AlertController } from '@ionic/angular';
 })
 export class UrlService {
 
+  //header: {'Access-Control-Allow-Origin': '*'}
+
   //url: string = "http://glidersi-esy-es.umbler.net/php/";
     //url: string = "http://localhost/catalogo/Catalogo/php/";
-    url: string ="http://identidadeimei.com/catalogo/php"; 
+    url: string ="http://identidadeimei.com/catalogo/php/"; 
+    
+    
 
   constructor(public alert: AlertController) { }
 
